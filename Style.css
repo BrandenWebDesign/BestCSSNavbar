@@ -1,0 +1,333 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	background-color: #333;
+	padding: 16px;  
+	font-family: "Poppins", sans-serif;
+}
+
+nav a {
+	text-decoration: none;
+	color: #f2f2f2;
+}
+
+#Logo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+label {
+	 color: #f2f2f2;
+	 cursor: pointer;
+	 display: none;
+}
+
+.menuc {
+	list-style: none;
+	display: flex;
+	gap: 16px;
+  /*margin-right: auto;
+	margin-left: auto; */
+
+}
+
+.menuc a {
+	padding: 8px;
+	transition: 0.5s ease-in-out;
+}
+
+.menuc a:hover {
+	background-color: darkgray;
+	width: 100%;
+	text-shadow: 0 0 1px #f2f2f2, 0 0 1px #f2f2f2; /*use in place of bold*/
+	transition: 0.5s;
+
+
+}
+
+/*.img1 {
+
+	max-width: 100%;
+	height: auto;
+	transition: 0.5s ease-in-out;
+}
+
+
+.img1:hover {
+
+	width: 800px;
+
+}
+
+*/
+
+.img1 {
+	border-radius: 25px;
+	margin-top: 40px;
+  max-width: 100%;
+  height: auto;
+  transition: box-shadow 0.5s ease-in-out; /* Add a transition for the box-shadow property */
+
+  /* Add a default box-shadow (optional) */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+
+
+
+
+
+
+opacity: 0;
+}
+
+.img1.fade-in {
+  opacity: 1; /* Move to the on-screen position (left) */
+}
+
+
+
+
+
+
+/* Add a hover effect to increase box-shadow on hover */
+.img1:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
+  width: 750px;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	appearance: none;
+	background-color: inherit;
+	max-width: 100%;
+	height: auto;
+	display: flex;
+	top: 20px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+#demo {
+	color: black;
+	font-size: 40px;
+	position: relative;
+	top: 20px;
+	text-align: center;
+
+}
+
+body.transition {
+	transition: background-color 1s ease;
+}
+
+
+
+
+
+section {
+		display: flex;
+		margin: 50px 100px 100px 100px;
+		border: 1px solid black;
+		padding: 20px;
+		background-color: whitesmoke;
+		overflow: hidden;
+		color: black;
+		width: 700px;
+		border-radius: 25px;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+		height: auto;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+		font-family: "Poppins", sans-serif;
+
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+	label {
+		display: block;
+	}
+
+	.menuc {
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		justify-content: center;
+		background-color: #333;
+		text-align: center;
+		gap: 32px;
+		top: 56px;
+		width: 100%;
+		height: calc(100vh - 80px);
+		left: -100%;
+		transition: 0.5s;
+		z-index: 1;
+
+	}
+
+	.menuc a{
+		width: 100%; /*add later for transition ease*/
+	}
+
+
+
+
+	input[type="checkbox"]:checked ~ .menuc {
+		left: 0;
+	}
+
+	.img1 {
+		width: 350px;
+		margin-top: 20px;
+	}
+
+	.img1:hover {
+
+		width: 400px;
+
+	}
+
+	#demo{
+		font-size: 20px;
+	}
+
+section {
+width: 340px;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+	.Container {
+
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: -1;
+		overflow: hidden;
+		top: 0;
+		margin-top: 4%;
+
+
+
+
+
+	}
+
+
+
+
+	.box div{
+		max-width: 100%;
+		height: auto;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background: black;
+		border: 6px solid hsl(0, 0%, 0%);
+		border-radius: 50%;
+
+
+
+
+	}
+
+	.box div:nth-child(1){
+		top:1%;
+		left: 4%;
+		animation: move 5s ease-in-out  infinite;
+	}
+
+	.box div:nth-child(2){
+		top:30%;
+		right: 4%;
+		animation: move 5s ease-in-out  infinite;
+	}
+
+	.box div:nth-child(3){
+		top:42%;
+		right: 20%;
+		animation: move 4s ease-in-out  infinite;
+	}
+
+	.box div:nth-child(4){
+		top:20%;
+		right: 90%;
+		animation: move 4s ease-in-out  infinite;
+	}
+
+	.box div:nth-child(5){
+		top:60%;
+		right: 37%;
+		animation: move 8s ease-in-out infinite;
+	}
+
+	.box div:nth-child(6){
+		top:90%;
+		right: 55%;
+		animation: move 5s ease-in-out  infinite;
+	}
+
+	.box div:nth-child(7){
+		top:9%;
+		left: 50%;
+		animation: move 10s ease-in-out  infinite;
+	}
+	.box div:nth-child(8){
+		top:90%;
+		left: 58%;
+		animation: move 9s ease-in-out infinite;
+	}
+
+
+	@keyframes move{
+		0%{
+			transform: scale(0) translateY(0) rotate(0deg);
+			opacity: 0;
+		}
+
+			50%{
+			opacity: 0.3;
+
+		
+		}
+
+			100%{
+			transform: scale(1) translateY(-90%) rotate(360deg);
+			opacity: 0;
+
+		}
+	}
+
+
+
+}
